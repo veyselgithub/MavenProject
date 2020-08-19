@@ -1,5 +1,6 @@
 # MavenProject
 MavenProjectHavelsan
+
 *********** Projenin debug modda açılabilmesi için INTELLIJ IDEA'da 'oksuz' klasörü altındaki 'huseyin' klasörüne sağ tıklanarak 'Mark Directory as' opsiyonundan bu klasör 'Sources Root' seçeneği seçilir. Böylelikle 'main' metodu aktif hale gelir.
 Projede beklenen  jar dosyasını decompile edip tekrar source code'u ile bir proje haline getirmek. Bu jardan oluşacak proje dosyası bir Maven Projesidir.
 
