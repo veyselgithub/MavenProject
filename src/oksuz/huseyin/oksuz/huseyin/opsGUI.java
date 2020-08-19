@@ -16,7 +16,7 @@ public class opsGUI extends JDialog {
     private JComboBox<String> cbHeading = new JComboBox();
     private JComboBox<String> cbSutun = new JComboBox();
     private JComboBox<String> cbOutput = new JComboBox();
-    private JComboBox<String> deliminator = new JComboBox();
+    private JComboBox<String> deliminator = new JComboBox();//kullanıcının sembol seçebilmesi için tanımlanan değişken.
     private JButton btnOk = new JButton("Kaydet");
     private JCheckBox cbKontroll = new JCheckBox();
     private Isleyici opsiyonlar = null;
@@ -80,11 +80,11 @@ public class opsGUI extends JDialog {
         this.cp.add(this.btnOk);
         this.setSize(290, 180);
         this.setLocationRelativeTo(parent);
-        this.cp.add(this.deliminator);
+        this.cp.add(this.deliminator);//kullanıcının sembol seçebilmesini sağlayan arayüz tasarımı.
         JLabel lbldeliminator = new JLabel("Sembol");
         lbldeliminator.setBounds(10, 115, 160, 20);
         this.cp.add(lbldeliminator);
-        this.deliminator.addItem("*");
+        this.deliminator.addItem("*");//kullanıcının seçebilieceği semboller.
         this.deliminator.addItem(";");
         this.deliminator.addItem("[");
         this.deliminator.setSelectedIndex(extention.equals(";") ? 0 : 1);
@@ -107,6 +107,7 @@ public class opsGUI extends JDialog {
                 opsGUI.this.parent.getLogger().append(false, "Sonuç Çıktısı\t\t: " + opsGUI.this.getOutputType());
                 opsGUI.this.parent.getLogger().append(false, "Kontrol Zorunluluğu\t: " + (opsGUI.this.getZorunluluk() ? "Var" : "Yok"));
                 opsGUI.this.parent.getLogger().append(false, "Bakılacak Sembol\t: " + opsGUI.this.getdeliminator());
+                //ust kodda kullanıcı hangi sembolü seçtiyse ekrana yazmayı sağlıyor.
                 opsGUI.this.parent.getLogger().append(false, " ");
                 opsGUI.this.setVisible(false);
             }
@@ -132,7 +133,8 @@ public class opsGUI extends JDialog {
     }
 
     private Object getdeliminator() {
-        return this.deliminator.getSelectedItem();
+        return this.deliminator.getSelectedItem();//sembolü içerisinde tutan değişkeni diğer dosyalarda elde edebilmek için
+
     }
 
 
